@@ -1,6 +1,10 @@
 # svelte-skeleton
 
+[![NPM version](https://img.shields.io/npm/v/svelte-skeleton.svg?style=flat)](https://www.npmjs.com/package/svelte-skeleton) [![NPM downloads](https://img.shields.io/npm/dm/svelte-skeleton.svg?style=flat)](https://www.npmjs.com/package/svelte-skeleton) [![Svelte v3](https://img.shields.io/badge/svelte-v3-blueviolet.svg)](https://svelte.dev)
+
 Simple implementation of SVG skeletons in Svelte 3
+
+![example](https://user-images.githubusercontent.com/25938785/90191444-8f443b80-ddc9-11ea-918f-da77070549b8.gif)
 
 ## :rocket: Features
 
@@ -40,6 +44,25 @@ npm i svelte-skeleton
 
   <!-- Any custom SVG shapes -->
 </Skeleton>
+```
+
+Also you can combine it with Svelte's `{#await ...}`:
+
+```html
+{#await promise}
+<!-- promise is pending -->
+<Skeleton height="360" width="360">
+  <rect width="96" height="72" x="0" y="0" rx="12" ry="12" />
+  <rect width="260" height="10" x="108" y="19" rx="5" ry="5" />
+  <rect width="150" height="10" x="108" y="43" rx="5" ry="5" />
+</Skeleton>
+{:then value}
+<!-- promise was fulfilled -->
+<YourCoolComponent {value} />
+{:catch error}
+<!-- promise was rejected -->
+<Error title="{error.message}" />
+{/await}
 ```
 
 ## API
