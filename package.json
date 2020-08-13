@@ -1,0 +1,38 @@
+{
+  "name": "svelte-skeleton",
+  "version": "1.0.0",
+  "description": "Simple implementation of SVG skeletons in Svelte 3",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "format": "prettier --write 'src/**/*'",
+    "prepublishOnly": "npm run format & npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisstasyev/svelte-skeleton.git"
+  },
+  "keywords": [
+    "svelte",
+    "skeleton",
+    "component"
+  ],
+  "author": "Denis Stasyev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/denisstasyev/svelte-skeleton/issues"
+  },
+  "homepage": "https://github.com/denisstasyev/svelte-skeleton#readme",
+  "devDependencies": {
+    "prettier": "latest",
+    "prettier-plugin-svelte": "latest",
+    "rollup": "latest",
+    "rollup-plugin-node-resolve": "latest",
+    "rollup-plugin-svelte": "latest",
+    "svelte": "latest"
+  }
+}

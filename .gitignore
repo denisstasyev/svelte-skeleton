@@ -1,0 +1,9 @@
+# IDE's
+.vscode
+
+# Project
+node_modules
+dist
+.npmrc
+
+.DS_Store
