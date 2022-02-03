@@ -6,6 +6,7 @@
 	export let speed = 2
 	export let animate = true
 	export let secondaryColorPercentWidth = 100
+	export let ariaLabel = null
 
 	let idClip = getUniqueId()
 	let idGradient = getUniqueId()
@@ -15,7 +16,7 @@
 	}
 </script>
 
-<svg {width} {height} aria-labelledby="loading-aria" preserveAspectRatio="none">
+<svg {width} {height} aria-label={ariaLabel} preserveAspectRatio="none">
 	<rect fill="url(#{idGradient})" clip-path="url(#{idClip})" {width} {height} x="0" y="0" />
 	<defs>
 		<clipPath id={idClip}>
