@@ -51,18 +51,18 @@ Also you can combine it with Svelte's `{#await ...}`:
 
 ```html
 {#await promise}
-  <!-- promise is pending -->
-  <Skeleton height="360" width="360">
-    <rect width="96" height="72" x="0" y="0" rx="12" ry="12" />
-    <rect width="260" height="10" x="108" y="19" rx="5" ry="5" />
-    <rect width="150" height="10" x="108" y="43" rx="5" ry="5" />
-  </Skeleton>
+<!-- promise is pending -->
+<Skeleton height="360" width="360">
+  <rect width="96" height="72" x="0" y="0" rx="12" ry="12" />
+  <rect width="260" height="10" x="108" y="19" rx="5" ry="5" />
+  <rect width="150" height="10" x="108" y="43" rx="5" ry="5" />
+</Skeleton>
 {:then value}
-  <!-- promise was fulfilled -->
-  <YourCoolComponent {value} />
+<!-- promise was fulfilled -->
+<YourCoolComponent {value} />
 {:catch error}
-  <!-- promise was rejected -->
-  <Error title="{error.message}" />
+<!-- promise was rejected -->
+<Error title="{error.message}" />
 {/await}
 ```
 
@@ -79,7 +79,7 @@ Also you can combine it with Svelte's `{#await ...}`:
 | speed                      | number  | `2`         |                                    |
 | animate                    | boolean | `true`      |                                    |
 | secondaryColorPercentWidth | number  | `100`       | Initial secondaryColor-part offset |
-| ariaLabel                  | ?string | `null`      | Aria Label                         |
+| ariaLabel                  | string  | `null`      | Aria Label                         |
 
 Please note that some older browsers (like Internet Explorer 11) do not support SVG animations. They will only show the background color without the animation line. To create skeletons for these browsers, you need to write your own CSS animations.
 
