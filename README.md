@@ -27,9 +27,11 @@ npm i svelte-skeleton
 
 ## Usage
 
+Please note that you should import `.svelte` file to compile it with your project's Svelte version (you can use compiled `svelte-skeleton/index.js`, but there could be errors with different versions of Svelte in your project and in this package)
+
 ```html
 <script>
-  import Skeleton from 'svelte-skeleton'
+  import Skeleton from 'svelte-skeleton/Skeleton.svelte'
 
   ...
 </script>
