@@ -1,14 +1,15 @@
 {
   "name": "svelte-skeleton",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Simple implementation of SVG skeletons in Svelte 3",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "files": [
-    "dist/*"
+    "dist/*",
+    "Skeleton.svelte"
   ],
   "scripts": {
-    "build": "rollup -c & cp ./src/Skeleton.svelte ./dist/Skeleton.svelte",
+    "build": "rollup -c & cp ./src/Skeleton.svelte ./Skeleton.svelte",
     "format": "prettier --write 'src/**/*'",
     "prepublishOnly": "npm run format & npm run build"
   },

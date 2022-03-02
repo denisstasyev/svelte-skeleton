@@ -7,3 +7,5 @@ dist
 .npmrc
 
 .DS_Store
+
+Skeleton.svelte
