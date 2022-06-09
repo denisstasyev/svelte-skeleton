@@ -4,9 +4,11 @@
   "description": "Simple implementation of SVG skeletons in Svelte 3",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "types": "./types/index.d.ts",
   "files": [
     "dist/*",
-    "Skeleton.svelte"
+    "Skeleton.svelte",
+    "types"
   ],
   "scripts": {
     "build": "rollup -c & cp ./src/Skeleton.svelte ./Skeleton.svelte",
